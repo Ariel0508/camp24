@@ -1,0 +1,61 @@
+.nav-hover {
+  padding: 4px 8px;
+  position: relative;
+  &:hover,
+  &:focus,
+  &:active {
+    font-weight: bold;
+    .span-top,
+    .span-right,
+    .span-bottom,
+    .span-left {
+      opacity: 1;
+    }
+  }
+  .span-top {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-top: 1px solid $gray-dark-color;
+    border-left: 1px solid $gray-dark-color;
+  }
+  .span-right {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    border-top: 1px solid $gray-dark-color;
+    border-right: 1px solid $gray-dark-color;
+  }
+  .span-bottom {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    border-right: 1px solid $gray-dark-color;
+    border-bottom: 1px solid $gray-dark-color;
+  }
+  .span-left {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    border-left: 1px solid $gray-dark-color;
+    border-bottom: 1px solid $gray-dark-color;
+  }
+}
+.active {
+  font-weight: bold;
+  span {
+    opacity: 1 !important;
+  }
+}

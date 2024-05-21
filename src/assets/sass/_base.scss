@@ -1,0 +1,147 @@
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap';
+//color
+$primary-color: #3b3b3b;
+$gray-dark-color: #919191;
+$gray-color: #f1f1f1;
+$gray-100-color: #fafafa;
+$gray-200-color: #c1c1c1;
+$gray-300-color: #5b5b5b;
+$gray-400-color: #fafafa;
+$gray-900-color: #1e1e1e;
+$light-color: #fff;
+$dark-color: #000;
+//bg-color
+.bg-light {
+  background: $light-color;
+}
+.bg-dark {
+  background: $dark-color;
+}
+.bg-gray {
+  background: $gray-color;
+}
+.bg-gray-100 {
+  background: $gray-100-color;
+}
+.bg-gray-200 {
+  background: $gray-200-color;
+}
+.bg-gray-400 {
+  background: $gray-400-color;
+}
+//text-color
+.text-light {
+  color: $light-color;
+}
+.text-gray-dark {
+  color: $gray-dark-color;
+}
+.text-primary {
+  color: $primary-color;
+}
+.text-gray-300 {
+  color: $gray-300-color;
+}
+.text-gray-900 {
+  color: $gray-900-color;
+}
+//border
+.border-1 {
+  border: 1px solid;
+}
+.border-top-1 {
+  border-top: 1px solid;
+}
+.border-bottom-1 {
+  border-bottom: 1px solid;
+}
+.border-left-1 {
+  border-left: 1px solid;
+}
+.border-right-1 {
+  border-right: 1px solid;
+}
+.border-light {
+  border-color: $light-color;
+}
+.border-dark {
+  border-color: $dark-color;
+}
+.border-gray {
+  border-color: $gray-color;
+}
+.border-gray-200 {
+  border-color: $gray-200-color;
+}
+//border-radius
+.border-radius-4 {
+  border-radius: 4px;
+}
+.border-radius-8 {
+  border-radius: 8px;
+}
+.border-radius-16 {
+  border-radius: 16px;
+}
+//font-size
+.fz-16 {
+  font-size: 16px;
+}
+.fz-20 {
+  font-size: 20px;
+}
+.fz-24 {
+  font-size: 24px;
+}
+.fz-28 {
+  font-size: 28px;
+}
+//font-weight
+.fw-bold {
+  font-weight: bold;
+}
+.fw-regular {
+  font-weight: 400;
+}
+
+.cursor-p {
+  cursor: pointer;
+}
+.z-100 {
+  z-index: 100;
+}
+
+.lh-15 {
+  line-height: 1.5;
+}
+.lh-12 {
+  line-height: 1.2;
+}
+.td-n {
+  text-decoration: none;
+}
+.text-start {
+  text-align: start;
+}
+.text-center {
+  text-align: center;
+}
+.text-end {
+  text-align: end;
+}
+body {
+  font-family: 'Noto Sans', sans-serif;
+  color: $primary-color;
+  line-height: 1.5;
+}
+a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 767px) {
+  a {
+    font-size: 16px;
+  }
+}
