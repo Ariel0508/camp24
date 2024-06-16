@@ -1,4 +1,5 @@
-@import 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100..900;1,100..900&display=swap');
 //color
 $primary-color: #3b3b3b;
 $gray-dark-color: #919191;
@@ -7,12 +8,16 @@ $gray-100-color: #fafafa;
 $gray-200-color: #c1c1c1;
 $gray-300-color: #5b5b5b;
 $gray-400-color: #fafafa;
+$gray-500-color: #e9e9e9;
 $gray-900-color: #1e1e1e;
 $light-color: #fff;
 $dark-color: #000;
 //bg-color
 .bg-light {
   background: $light-color;
+}
+.bg-primary {
+  background: $primary-color;
 }
 .bg-dark {
   background: $dark-color;
@@ -33,14 +38,23 @@ $dark-color: #000;
 .text-light {
   color: $light-color;
 }
-.text-gray-dark {
-  color: $gray-dark-color;
-}
 .text-primary {
   color: $primary-color;
 }
+.text-gray-dark {
+  color: $gray-dark-color;
+}
+.text-gray-200 {
+  color: $gray-200-color;
+}
 .text-gray-300 {
   color: $gray-300-color;
+}
+.text-gray-400 {
+  color: $gray-400-color;
+}
+.text-gray-500 {
+  color: $gray-500-color;
 }
 .text-gray-900 {
   color: $gray-900-color;
@@ -70,18 +84,31 @@ $dark-color: #000;
 .border-gray {
   border-color: $gray-color;
 }
+.border-gray-dark {
+  border-color: $gray-dark-color;
+}
 .border-gray-200 {
   border-color: $gray-200-color;
+}
+.border-gray-500 {
+  border-color: $gray-500-color;
 }
 //border-radius
 .border-radius-4 {
   border-radius: 4px;
+}
+.border-radius-5 {
+  border-radius: 5px;
 }
 .border-radius-8 {
   border-radius: 8px;
 }
 .border-radius-16 {
   border-radius: 16px;
+}
+//box-shadow
+.box-shadow-1 {
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.08) ;
 }
 //font-size
 .fz-16 {
@@ -95,6 +122,12 @@ $dark-color: #000;
 }
 .fz-28 {
   font-size: 28px;
+}
+.fz-32 {
+  font-size: 32px;
+}
+.fz-48 {
+  font-size: 48px;
 }
 //font-weight
 .fw-bold {
@@ -140,8 +173,3 @@ a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 767px) {
-  a {
-    font-size: 16px;
-  }
-}

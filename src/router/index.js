@@ -1,36 +1,42 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router';
 
 const routes = [
   {
     path: '/',
-    component: import('../views/HomeView.vue')
+    component: import('../views/HomeView.vue'),
   },
   {
     path: '/portfolio',
-    component: () => import('../views/PortfolioView.vue')
+    component: () => import('../views/PortfolioView.vue'),
   },
   {
     path: '/service',
-    component: () => import('../views/ServiceView.vue')
+    component: () => import('../views/ServiceView.vue'),
   },
   {
     path: '/blog',
-    component: () => import('../views/BlogView.vue')
+    component: () => import('../views/BlogView.vue'),
+
+  },
+  {
+    path: '/blogVr',
+    component: () => import('../views/BlogVrView.vue'),
+
   },
   {
     path: '/contact',
-    component: () => import('../views/ContactView.vue')
+    component: () => import('../views/ContactView.vue'),
   },
-  { path: '/:catchAll(.*)', redirect: '/' }
-]
+  { path: '/:catchAll(.*)', redirect: '/' },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
   linkActiveClass: 'active',
-  scrollBehavior (to, from, savedPosition) {
-    return { top: 0 }
+  scrollBehavior() {
+    return { top: 0 };
   },
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

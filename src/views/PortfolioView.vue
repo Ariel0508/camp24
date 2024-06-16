@@ -129,13 +129,14 @@
     </div>
   </div>
   <div class="portfolio_work container">
-    <ul class="portfolio_work_list d-f fd-c jc-sb ai-c flex-wrap mt-80">
-      <li class="portfolio_work_item col-12 col-md-6 mb-48" @click="openModal">
+    <ul class="portfolio_work_list d-f fd-c mt-80">
+      <li class="portfolio_work_item mb-48" @click="openModal">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">
           星際旅行訂票平台
         </h2>
@@ -159,13 +160,15 @@
             Bootstrap
           </li>
         </ul>
+        </div>
       </li>
-      <li class="portfolio_work_item col-12 col-md-6 mb-48">
+      <li class="portfolio_work_item mb-48">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">理財App</h2>
         <p class="portfolio_work_item_text text-gray-dark mb-16">
           連動帳戶與行動支付，讓 AI 提供您最好的理財建議
@@ -187,13 +190,15 @@
             React
           </li>
         </ul>
+        </div>
       </li>
-      <li class="portfolio_work_item col-12 col-md-6 mb-48">
+      <li class="portfolio_work_item mb-48">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">
           醫美診所官網
         </h2>
@@ -217,13 +222,15 @@
             WordPress
           </li>
         </ul>
+      </div>
       </li>
-      <li class="portfolio_work_item col-12 col-md-6 mb-48">
+      <li class="portfolio_work_item mb-48">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">
           美美美早餐店 POS 機 UI Design
         </h2>
@@ -247,13 +254,15 @@
             Wix
           </li>
         </ul>
+      </div>
       </li>
-      <li class="portfolio_work_item col-12 col-md-6 mb-48">
+      <li class="portfolio_work_item mb-48">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">
           電影院訂票系統
         </h2>
@@ -276,14 +285,16 @@
           >
             Vue
           </li>
-        </ul>
+          </ul>
+          </div>
       </li>
-      <li class="portfolio_work_item col-12 col-md-6 mb-48">
+      <li class="portfolio_work_item mb-48">
         <img
-          class="portfolio_work_img border-1 border-radius-8 border-gray mb-16"
+          class="portfolio_work_img border-1 border-radius-8 border-gray"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true"
           alt="圖片"
         />
+        <div class="ml-16 mr-16 mt-16">
         <h2 class="portfolio_work_item_title fz-20 fw-bold mb-8">
           巧克巧克形象官網設計
         </h2>
@@ -307,6 +318,7 @@
             網路電商
           </li>
         </ul>
+      </div>
       </li>
     </ul>
     <div class="portfolio_work_pagination d-f jc-c mb-80">
@@ -349,9 +361,9 @@
           </p>
         </div>
         <div
-          class="description mt-24 py-24 text-gray-300 border-top-1 border-gray-200"
+          class="description mt-24 text-gray-300"
         >
-          <div class="mobile">
+          <div class="mobile py-24 border-top-1 border-gray-200">
             <p class="fw-bold">設計原則</p>
             <p class="fw-bold mb-24">宇宙旅行、深色背景、強烈視覺效果</p>
             <p class="fw-bold">開發方式</p>
@@ -399,311 +411,336 @@
       </div>
     </div>
   </div>
-  <div class="maskEffect"></div>
+  <div class="maskEffect" @click="closeModal"></div>
 </template>
 
 <script setup>
 const openModal = () => {
-  const modal = document.querySelector('.modal')
-  modal.classList.toggle('openModal')
-  const maskEffect = document.querySelector('.maskEffect')
-  maskEffect.classList.toggle('mask')
-  window.scrollTo(0, 0)
-}
+  const modal = document.querySelector('.modal');
+  modal.classList.toggle('openModal');
+  const maskEffect = document.querySelector('.maskEffect');
+  maskEffect.classList.toggle('mask');
+  window.scrollTo(0, 0);
+};
 
 const closeModal = () => {
-  const modal = document.querySelector('.modal')
-  modal.classList.toggle('openModal')
-  const maskEffect = document.querySelector('.maskEffect')
-  maskEffect.classList.toggle('mask')
-}
+  const modal = document.querySelector('.modal');
+  modal.classList.toggle('openModal');
+  const maskEffect = document.querySelector('.maskEffect');
+  maskEffect.classList.toggle('mask');
+};
 </script>
 
 <style lang="scss">
-/*modal*/
-.modal {
-  position: absolute;
-  top: 68px;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-}
+// .modal {
+//   position: absolute;
+//   top: 68px;
+//   width: 100%;
+//   z-index: 11;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   opacity: 0;
+//   pointer-events: none;
+// }
 
-.modal.openModal {
-  opacity: 1;
-  pointer-events: auto;
-  transition: 0.4s ease;
-}
+// .modal.openModal {
+//   opacity: 1;
+//   pointer-events: auto;
+//   transition: 0.4s ease;
+// }
 
-.modal_content {
-  background-color: #fff;
-  width: 90%;
-  transform: scale(0);
-}
+// .modal_content {
+//   background-color: #fff;
+//   width: 90%;
+//   transform: scale(0);
+// }
 
-.modal.openModal .modal_content {
-  transform: scale(1);
-  transition: 0.4s ease;
-  transition-delay: 0.25s;
-}
+// .modal.openModal .modal_content {
+//   transform: scale(1);
+//   transition: 0.4s ease;
+//   transition-delay: 0.25s;
+// }
 
-.modal_close_btn {
-  position: absolute;
-  top: 32px;
-  right: 32px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  padding: 0;
-  height: 32px;
+// .modal_close_btn {
+//   position: absolute;
+//   top: 32px;
+//   right: 32px;
+//   border: none;
+//   background-color: transparent;
+//   cursor: pointer;
+//   padding: 0;
+//   height: 32px;
 
-  .material-symbols-outlined {
-    font-size: 32px;
-  }
-}
+//   .material-symbols-outlined {
+//     font-size: 32px;
+//   }
+// }
 
-/*遮罩效果*/
-.mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 10;
-}
+// /*遮罩效果*/
+// .maskEffect.mask {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.7);
+//   z-index: 10;
+// }
 
-.card {
-  width: 100%;
-  border-radius: 0 0 16px 16px;
-}
+// .card {
+//   width: 100%;
+//   border-radius: 0 0 16px 16px;
+// }
 
-h3.portfolio_title {
-  position: relative;
-  padding-bottom: 4px;
-  margin-bottom: 4px;
-}
+// h3.portfolio_title {
+//   position: relative;
+//   padding-bottom: 4px;
+//   margin-bottom: 8px;
+// }
 
-h3.portfolio_title::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 24px;
-  height: 2px;
-  background: #c1c1c1;
-}
+// h3.portfolio_title::after {
+//   content: "";
+//   position: absolute;
+//   top: 100%;
+//   left: 50%;
+//   transform: translate(-50%, 0%);
+//   width: 24px;
+//   height: 2px;
+//   background: #c1c1c1;
+// }
 
-.mark-big,
-.mark-bigTwo,
-.quote_big_left,
-.quote_big_right {
-  display: none;
-}
+// .mark-big,
+// .mark-bigTwo,
+// .quote_big_left,
+// .quote_big_right {
+//   display: none;
+// }
 
-.portfolio_work_item {
-  cursor: pointer;
-}
+// .portfolio_work_item {
+//   cursor: pointer;
+// }
 
-.portfolio_work_pagination_item {
-  width: 40px;
-  height: 40px;
-}
+// .portfolio_work_pagination_item {
+//   width: 40px;
+//   height: 40px;
+// }
 
-.pc {
-  display: none;
-}
+// .pc {
+//   display: none;
+// }
 
-@media (max-width: 768px) {
-  .portfolio_banner {
-    height: 540px;
-  }
+// @media (max-width: 767px) {
+//   h2.portfolio_title {
+//     width: 300px;
+//     position: relative;
+//   }
 
-  h2.portfolio_title {
-    width: 300px;
-    position: relative;
-  }
+//   h2.portfolio_title_two {
+//     width: 260px;
+//     position: relative;
+//   }
 
-  h2.portfolio_title_two {
-    width: 260px;
-    position: relative;
-  }
+//   p.portfolio_text {
+//     width: 235px;
+//   }
 
-  p.portfolio_text {
-    width: 235px;
-  }
+//   .mark {
+//     position: absolute;
+//     bottom: 0;
+//     right: 75px;
+//   }
 
-  .mark {
-    position: absolute;
-    bottom: 0;
-    right: 75px;
-  }
+//   .markTwo {
+//     position: absolute;
+//     bottom: 0;
+//     right: 50px;
+//   }
 
-  .markTwo {
-    position: absolute;
-    bottom: 0;
-    right: 50px;
-  }
+//   .portfolio_work_item {
+//     img {
+//       width: 100%;
+//     }
+//   }
 
-  .modal_content_text_two {
-    width: 287px;
-    margin: 0 auto;
-  }
+//   .modal_content_text_two {
+//     width: 287px;
+//     margin: 0 auto;
+//   }
 
-  .description .mobile {
-    width: 287px;
-    margin: auto;
-  }
+//   .description .mobile {
+//     width: 287px;
+//     margin: auto;
+//   }
 
-  .card-item {
-    width: 319px;
-    margin: auto;
-  }
-}
+//   .card-item {
+//     width: 319px;
+//     margin: auto;
+//   }
+// }
 
-@media screen and (min-width: 767px) {
-  .modal {
-    position: absolute;
-    top: 631px;
-  }
+// @media screen and (min-width: 768px) {
+//   .mark,
+//   .markTwo,
+//   .quote {
+//     display: none;
+//   }
 
-  .portfolio_banner {
-    height: 460px;
-  }
+//   .mark-big {
+//     display: block;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//   }
 
-  .portfolio_content {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 636px;
+//   .mark-bigTwo {
+//     display: block;
+//     position: absolute;
+//     bottom: 0;
+//     right: 30px;
+//   }
 
-    .portfolio_content_item,
-    .portfolio_content_item_two {
-      width: 298px;
-    }
-  }
+//   .portfolio_slogan {
+//     width: 670px;
+//     padding: 59px 0;
+//     position: relative;
+//     justify-content: center;
+//     margin-top: 17.5px;
+//     margin-bottom: 24px;
+//   }
 
-  h2.portfolio_title,
-  h2.portfolio_title_two {
-    position: relative;
-    font-size: 24px;
-    width: 580px;
-  }
+//   .quote_big_left {
+//     display: block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//   }
 
-  h2.portfolio_title_two {
-    margin-bottom: 0;
-  }
+//   .quote_big_right {
+//     display: block;
+//     position: absolute;
+//     bottom: 0;
+//     right: 0;
+//   }
+//   h2.portfolio_title,
+//   h2.portfolio_title_two {
+//     position: relative;
+//     font-size: 24px;
+//     width: 580px;
+//   }
 
-  .mark,
-  .markTwo,
-  .quote {
-    display: none;
-  }
+//   h2.portfolio_title_two {
+//     margin-bottom: 0;
+//   }
+//   .portfolio_content {
+//     flex-direction: row;
+//     justify-content: space-between;
+//     width: 636px;
+//     margin-bottom: 17.5px;
 
-  .mark-big {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+//   .portfolio_text {
+//     margin-bottom: 0;
+//   }
 
-  .mark-bigTwo {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 30px;
-  }
+//     .portfolio_content_item,
+//     .portfolio_content_item_two {
+//       width: 298px;
+//     }
+//   }
 
-  .portfolio_slogan {
-    width: 670px;
-    height: 192px;
-    position: relative;
-    justify-content: center;
-    margin-top: 80px;
-  }
+//   .portfolio_work.container {
+//     gap: 24px;
+//     margin-top: 120px;
+//     margin-bottom: 24px;
+//   }
 
-  .quote_big_left {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+//   .portfolio_work_list {
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
 
-  .quote_big_right {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
+//     .portfolio_work_item {
+//       width: 638px;
+//   }
+//   }
 
-  .portfolio_work.container {
-    padding: 0;
-  }
+//   .portfolio_work_item_tags_item {
+//     margin-right: 16px;
+//   }
 
-  .portfolio_work_list {
-    flex-direction: row;
-    margin-top: 120px;
-    margin-bottom: 72px;
-  }
+//   .portfolio_work_pagination {
+//     margin-bottom: 120px;
+//   }
 
-  .portfolio_work_item_tags_item {
-    margin-right: 16px;
-  }
+//   .modal_content_text_two {
+//     width: 287px;
+//     margin: 0 auto;
+//   }
 
-  .portfolio_work_pagination {
-    margin-bottom: 120px;
-  }
+//   .card-item {
+//     p {
+//       text-align: center;
+//     }
+//   }
+// }
+// @media screen and (min-width: 1200px) {
+//   .portfolio_work_list {
+// justify-content: space-between;
 
-  .modal_content {
-    padding-top: 104px;
-  }
+//   .portfolio_work_item {
+//       width: calc(50% - 12px);
+// }
+//   }
+//   .modal {
+//     position: absolute;
+//     top: 631px;
+//   }
 
-  .modal_close_btn {
-    top: 40px;
-  }
+//   .modal_content {
+//     padding-top: 104px;
+//   }
 
-  .modal_content_text_wrap {
-    display: flex;
-    justify-content: space-around;
-  }
+//   .modal_close_btn {
+//     top: 40px;
+//   }
 
-  .modal_content_text_wrap > div:first-child {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 532px;
-  }
+//   .modal_content_text_wrap {
+//     display: flex;
+//     justify-content: space-around;
+//   }
 
-  .description {
-    margin-block: 40px;
-    border-top: none;
-  }
+//   .modal_content_text_wrap > div:first-child {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
 
-  .mobile {
-    display: none;
-  }
+//     .modal_content_text_two {
+//     width: 532px;
+//   }
+//   }
 
-  .pc {
-    display: block;
-  }
+//   .description {
+//     margin-block: 40px;
+//     border-top: none;
+//   }
 
-  .card {
-    padding-block: 80px;
+//   .mobile {
+//     display: none;
+//   }
 
-    .card-item {
-      h3 {
-        font-size: 24px;
-        margin: 24px 0 16px 0;
-      }
+//   .pc {
+//     display: block;
+//   }
 
-      p {
-        text-align: center;
-      }
-    }
-  }
-}
+//   .card {
+//     padding-block: 80px;
+
+//     .card-item {
+//       h3 {
+//         font-size: 24px;
+//         margin: 24px 0 16px 0;
+//       }
+//     }
+//   }
+// }
 </style>

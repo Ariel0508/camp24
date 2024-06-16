@@ -1,32 +1,38 @@
+/* eslint-env node */
+
 module.exports = {
   root: true,
-  env: {
-    browser: true,
-    es2021: true
-  },
   extends: [
     'plugin:vue/vue3-essential',
-    'standard'
-  ],
-  overrides: [
+    'eslint:recommended',
+    'airbnb-base',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+  },
+  rules: {
+    'import/no-extraneous-dependencies': [
+      0,
+      {
+        devDependencies: true,
+        peerDependencies: true,
+        // optionalDependencies: true,
+        // bundledDependencies: true
+      },
+    ],
   },
   settings: {
     'import/resolver': {
       alias: {
         map: [
-          ['@', './src']
+          ['@', './src'],
         ],
-        extensions: ['.js', '.vue']
-      }
-    }
+        extensions: ['.js', '.vue'],
+      },
+    },
+    'import/core-modules': [
+      'vite',
+      '@vitejs/plugin-vue',
+    ],
   },
-  plugins: [
-    'vue'
-  ],
-  rules: {
-  }
-}
+};
