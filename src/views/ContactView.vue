@@ -1,5 +1,5 @@
 <template>
     <div>
-        Contact
+        聯絡我
     </div>
 </template>
